@@ -1,27 +1,27 @@
 [
     {
-        "model": "cachemanager.analysis_cache_entry",        
+        "model": "cachemanager.analysiscacheentry",        
         "fields": {
             "partition_id": "AROA_111",
-            "id": "v1|AROA_111|8a0c73fd5ad9af675f2835c107c89c28bdc92738|c16e0e59d85d90d0dc4ea00b2d915c3a1026fa1e|537f97e3dd49f23c811686a0b5c24b87d3b3f62a",
+            "id": "v1|AROA_111|8a0c73fd5ad9af675f2835c107c89c28bdc92738|c16e0e59d85d9000b2d915c3a1026fa1e|537f97e3dd49f23c811686a0b5c24b87d3b3f62a",
             "data": ["administer-resource", "read-config", "write-data"],
             "valid_until": 1735689599 
         }
     },
     {
-        "model": "cachemanager.analysis_cache_entry",        
+        "model": "cachemanager.analysiscacheentry",        
         "fields": {
             "partition_id": "AROA_111",
-            "id": "v1|AROA_111|2228a0c73fd5ad9af675f2835c107c89c28bdc92738|c16e0e59d85d90d0dc4ea00b2d915c3a1026fa1e|537f97e3dd49f23c811686a0b5c24b87d3b3f",
+            "id": "v1|AROA_111|2228a0c73fd5ad9af675f2835c107c89c28bdc92738|c16e0e59d85d9a00b2d915c3a1026fa1e|537f97e3dd49f23c811686a0b5c24b87d3b3f",
             "data": [],
             "valid_until": 1735948799
         }
     },
     {
-        "model": "cachemanager.analysis_cache_entry",        
+        "model": "cachemanager.analysiscacheentry",        
         "fields": {
             "partition_id": "AROA_222",
-            "id": "v1|AROA_222|123abc8a0c73fd5ad9af675f2835c107c89c28bdc92738|c16e0e59d85d90d0dc4ea00b2d915c3a1026fa1e|537f97e3dd49f23c811686a0b5c24b87d",
+            "id": "v1|AROA_222|123abc8a0c73fd5ad9af675f2835c107c89c28bdc92738|c16e0e59d85ea00b2d915c3a1026fa1e|537f97e3dd49f23c811686a0b5c24b87d",
             "data": ["read-config"],
             "valid_until": 1737417599
         }
