@@ -4,4 +4,7 @@ from django.contrib import admin
 
 from cachemanager.models import AnalysisCacheEntry
 
-admin.site.register(AnalysisCacheEntry)
+
+@admin.register(AnalysisCacheEntry)
+class AnalysisCacheEntryAdmin(admin.ModelAdmin):
+    list_display = ('id', 'partition_id', 'valid_until')
