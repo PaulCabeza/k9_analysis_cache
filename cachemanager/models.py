@@ -9,8 +9,8 @@ class AnalysisCacheEntry(models.Model):
     valid_until = models.BigIntegerField(null=True, blank=True)
 
     class Meta:
+        db_table = 'analysis_cache'
+        managed = False
         indexes = [
             models.Index(fields=['partition_id'], name='analysis_cache_partition_idx')
-        ]
-
-    
+        ]    
