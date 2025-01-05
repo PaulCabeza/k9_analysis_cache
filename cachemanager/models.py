@@ -10,5 +10,7 @@ class AnalysisCacheEntry(models.Model):
 
     class Meta:
         indexes = [
-            models.Index(fields=['partition_id'])
+            models.Index(fields=['partition_id'], name='analysis_cache_partition_idx')
         ]
+
+    
