@@ -1,6 +1,7 @@
 from django.db import models
 from datetime import datetime, timezone
 
+
 # Create your models here.
 
 class AnalysisCacheEntry(models.Model):
@@ -18,7 +19,12 @@ class AnalysisCacheEntry(models.Model):
 
     @classmethod
     def load_by_partition(cls, partition_id):
-        now = int(datetime.now(timezone.utc).timestamp())
+        """
+        Load all cache entries for a given partition_id
+        :param partition_id: partition_id to filter by (str)
+        :return: QuerySet
+        """
+        now: int = int(datetime.now(timezone.utc).timestamp())
         return cls.objects.filter(
             partition_id=partition_id,
             valid_until__gt=now
