@@ -4,11 +4,15 @@
 
 `k9_analysis_cache` is a Django project designed to implement a model that interacts with a MySQL database. The primary goal of this project is to create a Django model that allows for efficient access to analysis cache data. The model includes a method to bulk load records based on the `partition_id` field. Additionally, unit tests have been implemented to ensure the proper functionality of the create, read, and bulk read methods.
 
+The `AnalysisCacheEntry` model has been implemented to access the `analysis_cache` table that runs on a MySQL server. To simulate the server, a local access configuration has been set up using Docker. The tests can be found in the Django app located at `cachemanager/tests.py`, and here is a screenshot of the results of the executed tests:
+
+![Test Results](images/test_results.png)
+
 ## Requirements
 
-- Python 3.8 or higher
+- Python 3.11 or higher
 - Django 5.1.4
-- MySQL
+- MySQL installed or
 - Docker (for running MySQL in a container)
 - pip
 
@@ -23,7 +27,7 @@
 2. **Create a virtual environment** (optional but recommended):
    ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   source venv/bin/activate 
    ```
 
 3. **Install the dependencies**:
@@ -34,6 +38,7 @@
 4. **Set up the MySQL database**:
    You can run a MySQL container using Docker. Use the following command to start a MySQL container:
    ```bash
+   docker pull mysql:latest
    docker run --name mysql-container -e MYSQL_ROOT_PASSWORD=my_secret_password -d -p 3306:3306 mysql:latest
    ```
 
@@ -72,31 +77,13 @@
 
 ## Project Structure
 
-- `cachemanager/`: Contains the model logic and unit tests.
+- `cachemanager/`: Contains the model logic and tests.
 - `k9_analysis_cache/`: Django project configuration.
-- `tests.py`: Contains unit tests for the model and cache functionality.
+- `tests.py`: Contains tests for the model and cache functionality.
 
 ## Testing
 
 To run the unit tests, ensure your test database is configured and execute:
-bash
-pytest
+```bash
+pytest -v
 ```
-
-### Customization
-
-- **Description**: Ensure that the description accurately reflects the purpose and functionality of your project.
-- **Requirements**: Add any additional requirements your project may have.
-- **Installation**: Make sure the installation steps are clear and precise.
-- **Project Structure**: You can add more details about the project structure if necessary.
-- **Contributions**: If you have a specific process for contributions, include it.
-
-This README.md provides a comprehensive overview of your project, including setup instructions for running a MySQL container with Docker, which should help users understand how to get started with your project.
-
-## Contributions
-
-Contributions are welcome! If you would like to contribute, please open an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
