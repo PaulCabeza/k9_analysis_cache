@@ -104,7 +104,7 @@ class TestAnalysisCacheEntry:
         # 3 valid entries should be returned
         assert len(returned_entries) == 3
         
-        # Verificar que los IDs de las entradas devueltas son los esperados
+        # Verify that the correct entries ids are returned
         expected_ids = {'v1|AROA_333|test123', 'v1|AROA_333|test789', 'v1|AROA_333|test101010'}
         returned_ids = {entry.id for entry in returned_entries}
 
