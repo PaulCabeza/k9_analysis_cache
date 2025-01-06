@@ -12,7 +12,6 @@ class AnalysisCacheEntry(models.Model):
 
     class Meta:
         db_table = 'analysis_cache'
-        managed = False
         indexes = [
             models.Index(fields=['partition_id'], name='analysis_cache_partition_idx')
         ]
