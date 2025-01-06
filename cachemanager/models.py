@@ -18,7 +18,7 @@ class AnalysisCacheEntry(models.Model):
         ]
 
     @classmethod
-    def load_by_partition(cls, partition_id):
+    def load_by_partition(cls, partition_id) -> models.QuerySet:
         """
         Load all cache entries for a given partition_id
         :param partition_id: partition_id to filter by (str)

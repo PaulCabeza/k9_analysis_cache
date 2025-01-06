@@ -3,8 +3,6 @@ from datetime import datetime, timezone
 from cachemanager.models import AnalysisCacheEntry
 
 
-# Create your tests here.
-
 @pytest.mark.django_db
 class TestAnalysisCacheEntry:
     test_single_record = {
